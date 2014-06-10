@@ -29,9 +29,10 @@ unpack(){
 make_target() {
 	make all 
 }
-
-
-post_install() {
+makeinstall_target() {
+	: # nop
+}
+addon() {
 	mkdir -p $ADDON_BUILD/$PKG_ADDON_ID/bin
-	cp $BUILD/$PKG_NAME/deleter $ADDON_BUILD/$PKG_ADDON_ID/bin
+	cp $BUILD/$PKG_NAME-$PKG_VERSION/deleter $ADDON_BUILD/$PKG_ADDON_ID/bin
 }
