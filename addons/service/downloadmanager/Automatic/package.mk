@@ -1,7 +1,7 @@
 ################################################################################
 ################################################################################
 
-PKG_NAME="automatic"
+PKG_NAME="Automatic"
 PKG_VERSION="0.8.3"
 PKG_REV="1"
 PKG_ARCH="any"
@@ -21,30 +21,28 @@ PKG_ADDON_TYPE="xbmc.service"
 PKG_AUTORECONF="no"
 unpack(){
         [ -d $BUILD/$PKG_NAME-$PKG_VERSION ] && rm -rf $BUILD/$PKG_NAME-$PKG_VERSION
-        mkdir -p $BUILD/$PKG_NAME-$PKG_VERSION
-        tar -xzf $SOURCES/$PKG_NAME/v$PKG_VERSION.tar.gz -C $BUILD/$PKG_NAME-$PKG_VERSION
+        tar -xzf $SOURCES/$PKG_NAME/v$PKG_VERSION.tar.gz -C $BUILD
 }
 
 pre_configure_target() {
-	#cd ./$BUILD/$PKG_NAME-$PKG_VERSION/Automatic-$PKG_VERSION
-	cd Automatic-$PKG_VERSION
 	./autogen.sh --host=$TARGET_NAME \
-             --build=$HOST_NAME \
-             --target=$TARGET_NAME 
+		--build=$HOST_NAME \
+		--target=$TARGET_NAME
 
-	gl_cv_func_malloc_0_nonnull=yes ac_cv_func_malloc_0_nonnull=yes \
-	ac_cv_func_calloc_0_nonnull=yes ac_cv_func_realloc_0_nonnull=yes \
+	export gl_cv_func_malloc_0_nonnull=yes ac_cv_func_malloc_0_nonnull=yes 
+	export ac_cv_func_calloc_0_nonnull=yes ac_cv_func_realloc_0_nonnull=yes 
 	./configure --host=$TARGET_NAME \
-            --build=$HOST_NAME \
-            --target=$TARGET_NAME 
+		--build=$HOST_NAME \
+		--target=$TARGET_NAME 
 }
 
 make_target() {
-	make 
+  make
 }
+
 post_install() {
-mkdir -p $ADDON_BUILD/$PKG_ADDON_ID/bin
-  cp $BUILD/$PKG_NAME/src/automatic $ADDON_BUILD/$PKG_ADDON_ID/bin
-mkdir -p $ADDON_BUILD/$PKG_ADDON_ID/etc
-  cp $BUILD/$PKG_NAME/src/automatic.conf-sample $ADDON_BUILD/$PKG_ADDON_ID/etc/automatic.conf
+	mkdir -p $ADDON_BUILD/$PKG_ADDON_ID/bin
+	  cp $BUILD/$PKG_NAME/src/automatic $ADDON_BUILD/$PKG_ADDON_ID/bin
+	mkdir -p $ADDON_BUILD/$PKG_ADDON_ID/etc
+	  cp $BUILD/$PKG_NAME/src/automatic.conf-sample $ADDON_BUILD/$PKG_ADDON_ID/etc/automatic.conf
 }
