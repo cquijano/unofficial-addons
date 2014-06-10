@@ -42,7 +42,8 @@ make_target() {
 
 post_install() {
 	mkdir -p $ADDON_BUILD/$PKG_ADDON_ID/bin
-	  cp $BUILD/$PKG_NAME/src/automatic $ADDON_BUILD/$PKG_ADDON_ID/bin
+	pwd
+	  cp $BUILD/$PKG_NAME-$PKG_VERSION/src/automatic $ADDON_BUILD/$PKG_ADDON_ID/bin
 	mkdir -p $ADDON_BUILD/$PKG_ADDON_ID/etc
-	  cp $BUILD/$PKG_NAME/src/automatic.conf-sample $ADDON_BUILD/$PKG_ADDON_ID/etc/automatic.conf
+	  cp $BUILD/$PKG_NAME-$PKG_VERSION/src/automatic.conf-sample $ADDON_BUILD/$PKG_ADDON_ID/etc/automatic.conf
 }
