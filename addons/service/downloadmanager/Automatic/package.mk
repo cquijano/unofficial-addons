@@ -46,4 +46,6 @@ post_install() {
 	  cp $BUILD/$PKG_NAME-$PKG_VERSION/src/automatic $ADDON_BUILD/$PKG_ADDON_ID/bin
 	mkdir -p $ADDON_BUILD/$PKG_ADDON_ID/etc
 	  cp $BUILD/$PKG_NAME-$PKG_VERSION/src/automatic.conf-sample $ADDON_BUILD/$PKG_ADDON_ID/etc/automatic.conf
+        cp $BUILD/$PKG_NAME-$PKG_VERSION/src/automatic $INSTALL/bin
+        cp $BUILD/$PKG_NAME-$PKG_VERSION/src/automatic.conf-sample $INSTALL/etc/automatic.conf
 }
