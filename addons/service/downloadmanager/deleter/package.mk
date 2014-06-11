@@ -34,6 +34,7 @@ makeinstall_target() {
 }
 post_install() {
 	cp $BUILD/$PKG_NAME-$PKG_VERSION/deleter $INSTALL/bin
+	enable_service deleter.service
 }
 addon() {
 	mkdir -p $ADDON_BUILD/$PKG_ADDON_ID/bin

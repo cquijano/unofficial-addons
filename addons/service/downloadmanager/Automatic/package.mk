@@ -48,4 +48,5 @@ post_install() {
 	  cp $BUILD/$PKG_NAME-$PKG_VERSION/src/automatic.conf-sample $ADDON_BUILD/$PKG_ADDON_ID/etc/automatic.conf
         cp $BUILD/$PKG_NAME-$PKG_VERSION/src/automatic $INSTALL/bin
         cp $BUILD/$PKG_NAME-$PKG_VERSION/src/automatic.conf-sample $INSTALL/etc/automatic.conf
+	enable_service automatic.service
 }

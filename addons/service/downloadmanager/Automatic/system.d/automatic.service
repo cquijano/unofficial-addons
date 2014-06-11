@@ -1,0 +1,13 @@
+[Unit]
+Description=Automatic Service
+After=transmission.service
+
+ConditionPathExists=/storage/.automatic.conf
+
+[Service]
+Type=forking
+ExecStart=/bin/automatic -c /storage/.automatic.conf
+ExecReload=/bin/kill -HUP $MAINPID
+TimeoutStopSec=1s
+StartLimitInterval=0
+
