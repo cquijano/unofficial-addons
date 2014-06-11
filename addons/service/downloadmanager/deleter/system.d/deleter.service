@@ -2,7 +2,6 @@
 Description=Deleter Service
 
 [Service]
-Type=forking
 ExecStart=/bin/deleter -p /var/media/sda1-ata-WDC_WD5000AACS-0/videos -s 10 
 ExecReload=/bin/kill -HUP $MAINPID
 TimeoutStopSec=1s
