@@ -30,7 +30,10 @@ make_target() {
 	make all 
 }
 makeinstall_target() {
-	: # nop
+       : # nop
+}
+post_install() {
+	cp $BUILD/$PKG_NAME-$PKG_VERSION/deleter $INSTALL/bin
 }
 addon() {
 	mkdir -p $ADDON_BUILD/$PKG_ADDON_ID/bin
