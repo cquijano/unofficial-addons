@@ -7,7 +7,7 @@ ConditionPathExists=/storage/.transmission-daemon
 [Service]
 Type=forking
 PIDFile=/var/run/transmission.pid
-ExecStart=/bin/transmission-daemon -w /storage/videos -g /storage/.transmission-daemon --incomplete-dir /storage/incoming --watch-dir /storage/watch -a '*.*.*.*' -T
+ExecStart=/bin/transmission-daemon -x /var/run/transmission.pid -w /storage/videos -g /storage/.transmission-daemon --incomplete-dir /storage/incoming --watch-dir /storage/watch -a '*.*.*.*' -T
 ExecReload=/bin/kill -HUP $MAINPID
 TimeoutStopSec=1s
 StartLimitInterval=0

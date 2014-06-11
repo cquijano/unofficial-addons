@@ -1,6 +1,5 @@
 [Unit]
-Description=Automatic Service
-After=transmission.service
+Description=Deleter Service
 
 [Service]
 Type=forking
