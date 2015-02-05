@@ -40,7 +40,7 @@ make_target() {
   make
 }
 
-post_install() {
+addon() {
 	mkdir -p $ADDON_BUILD/$PKG_ADDON_ID/bin
 	pwd
 	  cp $BUILD/$PKG_NAME-$PKG_VERSION/src/automatic $ADDON_BUILD/$PKG_ADDON_ID/bin
