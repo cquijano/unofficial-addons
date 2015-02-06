@@ -11,7 +11,7 @@ PKG_URL="https://github.com/cquijano/deleter/archive/v0.2.tar.gz"
 PKG_DEPENDS=""
 PKG_BUILD_DEPENDS=""
 PKG_PRIORITY="optional"
-PKG_SECTION="service/system"
+PKG_SECTION="service/downloadmanager"
 PKG_SHORTDESC="Automatic free size keeper"
 PKG_LONGDESC="Automatic delete older files to keep free space on hard disk"
 
