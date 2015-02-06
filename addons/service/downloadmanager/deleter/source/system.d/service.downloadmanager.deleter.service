@@ -1,0 +1,14 @@
+[Unit]
+Description=Automatic Keep free space
+After=graphical.target
+
+[Service]
+Type=idle
+ExecStart=/bin/sh -c "exec sh /storage/.kodi/addons/service.downloadmanager.deleter/bin/deleter.start"
+TimeoutStopSec=1
+Restart=always
+RestartSec=2
+StartLimitInterval=0
+
+[Install]
+WantedBy=kodi.target
