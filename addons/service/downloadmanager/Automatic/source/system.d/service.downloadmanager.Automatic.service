@@ -4,7 +4,7 @@ After=graphical.target
 
 [Service]
 Type=idle
-ExecStart=/bin/sh -c "exec sh /storage/.kodi/addons/service.downloadmanager/Automatic/bin/Automatic.start"
+ExecStart=/bin/sh -c "exec sh /storage/.kodi/addons/service.downloadmanager.Automatic/bin/Automatic.start"
 TimeoutStopSec=1
 Restart=always
 RestartSec=2
