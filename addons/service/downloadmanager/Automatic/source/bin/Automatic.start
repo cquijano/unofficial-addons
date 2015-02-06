@@ -27,7 +27,7 @@ oe_setup_addon service.downloadmanager.Automatic
 chmod a+x $ADDON_DIR/bin/*
 mkdir -p /storage/.cache/automatic
 touch /storage/.cache/automatic/automatic.state
-AUTOMATIC_PATH_CUSTOM_CONFIG="../config/automatic.conf"
+AUTOMATIC_PATH_CUSTOM_CONFIG="$ADDON_DIR/config/automatic.conf"
 AUTOMATIC_ARG="$AUTOMATIC_ARG -c $AUTOMATIC_PATH_CUSTOM_CONFIG"
 
 eval exec automatic -f $AUTOMATIC_ARG
