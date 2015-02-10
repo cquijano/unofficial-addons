@@ -2,7 +2,7 @@
 ################################################################################
 
 PKG_NAME="Automatic"
-PKG_VERSION="b3a4bdbb"
+PKG_VERSION="b3a4bdbb455c5b8fb7e3fcf05c3a1b23dbc41a1e"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPL"
@@ -21,7 +21,7 @@ PKG_ADDON_TYPE="xbmc.service"
 PKG_AUTORECONF="no"
 unpack(){
         [ -d $BUILD/$PKG_NAME-$PKG_VERSION ] && rm -rf $BUILD/$PKG_NAME-$PKG_VERSION
-        tar -xzf $SOURCES/$PKG_NAME/v$PKG_VERSION.tar.gz -C $BUILD
+        tar -xzf $SOURCES/$PKG_NAME/$PKG_VERSION.tar.gz -C $BUILD
 }
 
 pre_configure_target() {
