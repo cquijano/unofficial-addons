@@ -2,12 +2,12 @@
 ################################################################################
 
 PKG_NAME="Automatic"
-PKG_VERSION="0.8.3"
+PKG_VERSION="b3a4bdbb"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPL"
 PKG_SITE="http://kylek.is-a-geek.org:31337/Automatic"
-PKG_URL="https://github.com/1100101/Automatic/archive/v$PKG_VERSION.tar.gz"
+PKG_URL="https://github.com/cquijano/Automatic/archive/$PKG_VERSION.tar.gz"
 PKG_DEPENDS="pcre libxml2 curl"
 PKG_BUILD_DEPENDS="toolchain pcre libxml2 curl"
 PKG_PRIORITY="optional"
