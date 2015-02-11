@@ -2,7 +2,7 @@
 ################################################################################
 
 PKG_NAME="Automatic"
-PKG_VERSION="b3a4bdbb455c5b8fb7e3fcf05c3a1b23dbc41a1e"
+PKG_VERSION="cb58545b218e976196a7a55fc0e13f96d3ef8291"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPL"
