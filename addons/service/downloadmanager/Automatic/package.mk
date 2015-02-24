@@ -45,4 +45,5 @@ addon() {
 	cp $BUILD/$PKG_NAME-$PKG_VERSION/src/automatic $ADDON_BUILD/$PKG_ADDON_ID/bin
 	mkdir -p $ADDON_BUILD/$PKG_ADDON_ID/config
 	cp -P $PKG_DIR/source/config/automatic.conf $ADDON_BUILD/$PKG_ADDON_ID/config/automatic.conf
+	cp -P $PKG_DIR/source/config/nopower.xml $ADDON_BUILD/$PKG_ADDON_ID/config/nopower.xml
 }
