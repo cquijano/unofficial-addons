@@ -1,0 +1,10 @@
+<keymap>
+  <global>
+    <remote>
+      <power>noop</power>
+    </remote>
+    <keyboard>
+     <power>noop</power>
+    </keyboard>
+  </global>
+</keymap>
