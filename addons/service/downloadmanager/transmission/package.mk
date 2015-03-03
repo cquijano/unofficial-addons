@@ -49,7 +49,6 @@ PKG_CONFIGURE_OPTS_TARGET="--enable-utp \
 
 post_install() {
 	mkdir -p $INSTALL/bin
-	echo "$PKG_BUILD/.$TARGET_NAME/daemon/transmission-daemon $INSTALL/bin/transmission-daemon"
 	cp $PKG_BUILD/.$TARGET_NAME/daemon/transmission-daemon $INSTALL/bin/transmission-daemon
 	cp $PKG_BUILD/.$TARGET_NAME/daemon/transmission-remote $INSTALL/bin/transmission-remote
 	mkdir -p $INSTALL/web
