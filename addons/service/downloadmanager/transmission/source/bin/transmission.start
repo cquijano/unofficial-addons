@@ -48,6 +48,7 @@ if [ "$TRANSMISSION_ENABLE_CUSTOM_CONFIG" = "false" ]; then
       TRANSMISSION_IP="*.*.*.*"
     fi
 
+    cp -R $ADDON_DIR/config/* /storage/.cache/transmission
     TRANSMISSION_ARG="$TRANSMISSION_ARG -w \"$TRANSMISSION_DL_DIR\""
     TRANSMISSION_ARG="$TRANSMISSION_ARG --incomplete-dir \"$TRANSMISSION_INC_DIR\""
     TRANSMISSION_ARG="$TRANSMISSION_ARG --watch-dir \"$TRANSMISSION_WATCH_DIR\""
