@@ -28,5 +28,5 @@ chmod a+x $ADDON_DIR/bin/*
 DELETER_PATH="/storage/downloads"
 mkdir -p $DELETER_PATH
 
-eval exec deleter -p $DELETER_PATH -s 1
+eval exec deleter -p $DELETER_PATH -s 3
 
