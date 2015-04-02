@@ -2,12 +2,12 @@
 ################################################################################
 
 PKG_NAME="deleter"
-PKG_VERSION="0.2"
+PKG_VERSION="0.3"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPL"
 PKG_SITE="https://github.com/cquijano/deleter"
-PKG_URL="https://github.com/cquijano/deleter/archive/v0.2.tar.gz"
+PKG_URL="https://github.com/cquijano/deleter/archive/v0.3.tar.gz"
 PKG_DEPENDS=""
 PKG_BUILD_DEPENDS=""
 PKG_PRIORITY="optional"
